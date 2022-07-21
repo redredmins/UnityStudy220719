@@ -12,17 +12,13 @@ public class TestManager : MonoBehaviour
     
     void Start()
     {
-        // 새로운 C# 파일로 MyClass 만드세요.
-        // MyClass의 내용은 이름, 위치정보, 번호
-        // 기능은 1) 생성자에서 이름, 위치, 번호를 다 매개변수로 받기
-        //       2) 이름, 위치, 번호를 로그로 찍어주는 메소드
-
-        // 새로운 C# 파일로 MyPos 구조체를 만드시고
-        // MyClass에서 위치정보를 전달할 때 활용하세요.
-        // 위치정보는 위치 이름, 위치 벡터값을 가짐.
-
         // TestManager의 Start 메소드에서 MyClass 인스턴스 생성하고
         // 로그 찍어보기
+
+        var mp = new MyPos("내위치", 1f, 0.5f, -20f);
+        MyClass mc = new MyClass("마이클래스", mp, 3);
+
+        mc.ShowLog();
     }
 
     void Test()
